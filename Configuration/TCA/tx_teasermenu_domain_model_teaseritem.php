@@ -135,11 +135,28 @@ return [
 	    'target_page' => [
 	        'exclude' => false,
 	        'label' => 'LLL:EXT:teasermenu/Resources/Private/Language/locallang_db.xlf:tx_teasermenu_domain_model_teaseritem.target_page',
-	        'config' => [
-			    'type' => 'input',
-			    'size' => 30,
-			    'eval' => 'trim'
-			],
+            'config' => [
+                'type' => 'input',
+                'size' => 6,
+                'max' => 255,
+                'eval' => 'trim,required',
+                'wizards' => [
+                    'link' => [
+                        'type' => 'popup',
+                        'title' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_link_formlabel',
+                        'icon' => 'actions-wizard-link',
+                        'blindLinkOptions' => 'file,mail,spec,url',
+                        'module' => [
+                            'name' => 'wizard_link'
+                        ],
+                        'JSopenParams' => 'height=600,width=800,status=0,menubar=0,scrollbars=1',
+                        'params' => [
+                            'blindLinkOptions' => 'folder,file,mail,url',
+                        ],
+                    ]
+                ],
+                'softref' => 'typolink'
+            ]
 	    ],
 	    'custom_label' => [
 	        'exclude' => true,
