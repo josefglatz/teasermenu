@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-03-08T05:25:33Z" product-name="teasermenu">
+		<header/>
+		<body>
+			<trans-unit id="tx_teasermenu_domain_model_teaseritem">
+				<source>Teaser Item</source>
+			</trans-unit>
+			<trans-unit id="tx_teasermenu_domain_model_teaseritem.type">
+				<source>Type</source>
+			</trans-unit>
+			<trans-unit id="tx_teasermenu_domain_model_teaseritem.target_page">
+				<source>Target Page</source>
+			</trans-unit>
+			<trans-unit id="tx_teasermenu_domain_model_teaseritem.custom_label">
+				<source>Custom Label</source>
+			</trans-unit>
+			<trans-unit id="tx_teasermenu_domain_model_teaseritem.custom_image">
+				<source>Custom Image</source>
+			</trans-unit>
+			<trans-unit id="tx_teasermenu_domain_model_teaseritem.layout">
+				<source>Layout</source>
+			</trans-unit>
+			<trans-unit id="tx_teasermenu.ncew.title">
+				<source>Teaser Menu</source>
+			</trans-unit>
+			<trans-unit id="tx_teasermenu.ncew.description">
+				<source>Flexible Fluid teaser menu navigation</source>
+			</trans-unit>
+			<trans-unit id="tt_content.fields.teasermenuitems">
+				<source>Teaser Menu Items</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

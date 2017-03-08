@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-03-08T05:25:33Z" product-name="teasermenu">
+		<header/>
+		<body>
+			<trans-unit id="type.description">
+				<source>type</source>
+			</trans-unit>
+			<trans-unit id="target_page.description">
+				<source>targetPage</source>
+			</trans-unit>
+			<trans-unit id="custom_label.description">
+				<source>customLabel</source>
+			</trans-unit>
+			<trans-unit id="custom_image.description">
+				<source>customImage</source>
+			</trans-unit>
+			<trans-unit id="layout.description">
+				<source>layout</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

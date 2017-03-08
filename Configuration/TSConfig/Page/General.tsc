@@ -1,0 +1,30 @@
+// Example: Configure layout items via PageTSConfig (which is loaded automatically)
+TCEFORM.tx_teasermenu_domain_model_teaseritem {
+    layout {
+        removeItems := addToList()
+        addItems {
+            10 = Gray
+        }
+    }
+}
+
+
+// Hide table in list view
+#mod.web_list.table.tx_teasermenu_domain_model_teaseritem.hideTable = 1
+
+
+// Register custom tt_content CType in NCEW
+mod.wizards.newContentElement.wizardItems {
+    common {
+        elements {
+            teasermenu {
+                iconIdentifier = content-special-menu
+                title = LLL:EXT:teasermenu/Resources/Private/Language/locallang.xlf:tx_teasermenu.ncew.title
+                description = LLL:EXT:backend/Resources/Private/Language/locallang_db_new_content_el.xlf:menu_pages.description
+                tt_content_defValues {
+                    CType = teasermenu
+                }
+            }
+        }
+        }
+}
