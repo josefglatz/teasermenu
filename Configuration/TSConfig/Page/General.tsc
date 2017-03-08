@@ -10,7 +10,7 @@ TCEFORM.tx_teasermenu_domain_model_teaseritem {
 
 
 // Hide table in list view
-#mod.web_list.table.tx_teasermenu_domain_model_teaseritem.hideTable = 1
+mod.web_list.table.tx_teasermenu_domain_model_teaseritem.hideTable = 1
 
 
 // Register custom tt_content CType in NCEW
