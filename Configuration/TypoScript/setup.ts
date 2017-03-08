@@ -32,7 +32,6 @@ tt_content.teasermenu {
         3 >
         5 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
         5 {
-          if.isTrue.field = custom_image
           references.fieldName = custom_image
           as = image
         }

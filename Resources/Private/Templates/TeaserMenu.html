@@ -8,13 +8,13 @@
 				<f:for each="{menuItems}" as="item" iteration="i">
 					<f:switch expression="{item.data.type}">
 						<f:case value="0">
-							<f:render section="ItemDefault" arguments="{contentElement: data, item: item.data, iterator: i}" />
+							<f:render section="ItemDefault" arguments="{contentElement: data, item: item, iterator: i}" />
 						</f:case>
 						<f:case value="1">
-							<f:render section="ItemSpacer" arguments="{contentElement: data, item: item.data, iterator: i}" />
+							<f:render section="ItemSpacer" arguments="{contentElement: data, item: item, iterator: i}" />
 						</f:case>
 						<f:case value="default">
-							<f:render section="ItemDefault" arguments="{contentElement: data, item: item.data, iterator: i}" />
+							<f:render section="ItemDefault" arguments="{contentElement: data, item: item, iterator: i}" />
 						</f:case>
 					</f:switch>
 				</f:for>
@@ -24,12 +24,23 @@
 </f:section>
 
 <f:section name="ItemDefault">
-	<div class="teasermenu-item teasermenu-item--layout-{item.layout}">Ich bin ein Default</div>
-	{_all -> f:debug(inline:1)}
+	<div class="teasermenu-item teasermenu-item--layout-{item.data.layout}">Default item
+		<f:if condition="{item.image -> f:count()} > 0">
+			<f:for each="{item.image}" as="image">
+				<i>with image: <f:uri.image src="{image.uid}" treatIdAsReference="true" /></i>
+			</f:for>
+		</f:if>
+		{_all -> f:debug(inline:1)}
+	</div>
 </f:section>
 
 <f:section name="ItemSpacer">
-	<div class="teasermenu-item teasermenu-item--layout-{item.layout}">	Ich bin ein Spacer</div>
+	<div class="teasermenu-item teasermenu-item--layout-{item.data.layout}">Spacer item</div>
+	<f:if condition="{item.image -> f:count()} > 0">
+		<f:for each="{item.image}" as="image">
+			<i>with image: <f:uri.image src="{image.uid}" treatIdAsReference="true" /></i>
+		</f:for>
+	</f:if>
 	{_all -> f:debug(inline:1)}
 </f:section>
 </html>
