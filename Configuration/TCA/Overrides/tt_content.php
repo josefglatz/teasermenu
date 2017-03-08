@@ -14,7 +14,7 @@ call_user_func(
             [
                 $languageFileCePrefix . 'tx_teasermenu.ncew.title',
                 'teasermenu',
-                'content-special-menu'
+                'content-special-menu',
             ],
             'menu',
             'after'
