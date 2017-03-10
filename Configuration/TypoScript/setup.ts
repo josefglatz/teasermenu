@@ -14,9 +14,6 @@ tt_content.teasermenu {
     10 = {$teasermenu.templates.layoutRootPath}
   }
 
-  settings {
-
-  }
   dataProcessing {
     1 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
     1 {
@@ -32,6 +29,27 @@ tt_content.teasermenu {
         1 {
           references.fieldName = custom_image
           as = image
+        }
+        20 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+        20 {
+          if.isTrue.field = target_page
+          selectFields = title,nav_title,media
+          pidInList.data = leveluid : 0
+          recursive = 99
+          table = pages
+          where.field = target_page
+          where.wrap = uid=|
+          begin = 0
+          as = targetPage
+          languageField = sys_language_uid
+          dataProcessing {
+            1 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+            1 {
+              if.isTrue.field = media
+              references.fieldName = media
+              as = images
+            }
+          }
         }
       }
     }
