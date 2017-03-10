@@ -1,4 +1,7 @@
-<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<html
+	xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	xmlns:tm="http://typo3.org/ns/JosefGlatz/Teasermenu/ViewHelpers"
+	data-namespace-typo3-fluid="true">
 <f:layout name="Teasermenu" />
 
 <f:section name="Main">
@@ -24,11 +27,22 @@
 </f:section>
 
 <f:section name="ItemDefault">
+	{tm:record(id: '{item.data.target_page}', table: 'pages')}
 	<div class="teasermenu-item teasermenu-item--layout-{item.data.layout}">Default item
 		<f:if condition="{item.image -> f:count()} > 0">
 			<f:for each="{item.image}" as="image">
 				<i>with image: <f:uri.image src="{image.uid}" treatIdAsReference="true" /></i>
 			</f:for>
+		</f:if>
+		Title:
+		<f:if condition="{item.data.custom_label} = ''">
+			<f:then>
+				<f:if condition="{targetPage.nav_title}">
+					<f:then>{targetPage.nav_title}</f:then>
+					<f:else>{targetPage.title}</f:else>
+				</f:if>
+			</f:then>
+			<f:else>{item.data.custom_label}</f:else>
 		</f:if>
 		{_all -> f:debug(inline:1)}
 	</div>
