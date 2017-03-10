@@ -18,20 +18,18 @@ tt_content.teasermenu {
 
   }
   dataProcessing {
-    3 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
-    3 {
+    1 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+    1 {
       table = tx_teasermenu_domain_model_teaseritem
       pidInList = this
       as = menuItems
       where.data = field:uid
       where.wrap = parent=|
-     orderBy = sorting
+      orderBy = sorting
 
-      dataProcessing >
       dataProcessing {
-        3 >
-        5 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
-        5 {
+        1 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+        1 {
           references.fieldName = custom_image
           as = image
         }
