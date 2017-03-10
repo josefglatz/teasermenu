@@ -25,7 +25,7 @@ return [
     ],
     'types' => [
         // Default
-        '0' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, type, target_page, custom_label, custom_image, hidden, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+        '0' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, type, layout, target_page, custom_label, custom_image, hidden, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
         // Spacer
         '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, type, layout, custom_image, hidden, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
