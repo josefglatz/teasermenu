@@ -18,7 +18,7 @@ tt_content.teasermenu {
     1 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
     1 {
       table = tx_teasermenu_domain_model_teaseritem
-      pidInList = this
+      pidInList.data = field:pid
       as = menuItems
       where.data = field:uid
       where.wrap = parent=|
